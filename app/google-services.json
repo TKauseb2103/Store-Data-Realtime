@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "740193851884",
+    "project_id": "store-data-realtime-c1107",
+    "storage_bucket": "store-data-realtime-c1107.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740193851884:android:4f043c4788dac9a0e248c9",
+        "android_client_info": {
+          "package_name": "com.example.storedatarealtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeAZIZ27g5kNf7sgAOLP2NTgPiPuPOQOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
