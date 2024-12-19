@@ -7,22 +7,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
-    private Context context;
+    private final Context context;
     private List<DataClass> dataList;
+
+    public MyAdapter(Context context, List<DataClass> dataList) {
+        this.context = context;
+        this.dataList = dataList;
+    }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
-        return null;
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -47,7 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataList.size();
     }
 
     public void searchDataList(ArrayList<DataClass> searchList) {
@@ -64,11 +72,10 @@ class MyViewHolder extends RecyclerView.ViewHolder {
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        recImage = recImage.findViewById(R.id.recImage);
-        recCard = recCard.findViewById(R.id.recCard);
-        recTitle = recTitle.findViewById(R.id.recTitle);
-        recDesc = recDesc.findViewById(R.id.recDesc);
-        recLang = recLang.findViewById(R.id.recPriority);
-
+        recImage = itemView.findViewById(R.id.recImage);
+        recCard = itemView.findViewById(R.id.recCard);
+        recTitle = itemView.findViewById(R.id.recTitle);
+        recDesc = itemView.findViewById(R.id.recDesc);
+        recLang = itemView.findViewById(R.id.recPriority);
     }
 }
